@@ -1,27 +1,93 @@
-#container {
+.home-content {
+  --padding-top: 0;
+  --padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.home-container {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.app-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.welcome {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 20px 0;
 }
 
-#container a {
-  text-decoration: none;
+ion-item {
+  margin-bottom: 15px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-group ion-button {
+  flex: 0 0 48%;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 0.8rem;
+  color: gray;
+}.home-content {
+  --padding-top: 0;
+  --padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.home-container {
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.welcome {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+ion-item {
+  margin-bottom: 15px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-group ion-button {
+  flex: 0 0 48%;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 0.8rem;
+  color: gray;
 }

@@ -1,0 +1,62 @@
+ion-toolbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+.login-content {
+    --padding-top: 0;
+    --padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .login-container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .app-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0; 
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: gray;
+    margin: 0; 
+  }
+  
+  .welcome {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  ion-item {
+    margin-bottom: 20px;
+  }
+  
+  .login-button {
+    margin-top: 20px;
+  }
+  
+  .create-account-link {
+    display: block;
+    margin-top: 20px;
+    color: blue;
+    text-decoration: underline;
+    font-size: 0.9rem;
+  }
+  
+  .footer-text {
+    text-align: center;
+    font-size: 0.8rem;
+    color: gray;
+  }
