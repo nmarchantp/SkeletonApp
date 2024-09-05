@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -14,26 +15,23 @@ export class HomePage implements OnInit {
   educationLevel: string = '';
   dob: string = '';
 
-  constructor(private router: Router, private alertController: AlertController) { }
+  constructor(private route: ActivatedRoute, private alertController: AlertController) {}
 
   ngOnInit() {
-    const navigation = this.router.getCurrentNavigation();
-    if (navigation?.extras?.state) {
-      const state = navigation.extras.state as { username: string, password: string };
-      this.username = state.username;
-    }
+    this.route.queryParams.subscribe(params => {
+      this.username = params['username'] || ''; 
+    });
   }
-
-  async showInfo() {
+  async mostrarInfo() {
     const alert = await this.alertController.create({
-      header: 'User Information',
-      message: `Name: ${this.firstName} ${this.lastName}`,
+      header: 'Información Usuario',
+      message: `Nombre: ${this.firstName} ${this.lastName}`,
       buttons: ['OK']
     });
     await alert.present();
   }
 
-  clearForm() {
+  LimpiarForm() {
     this.firstName = '';
     this.lastName = '';
     this.educationLevel = '';
