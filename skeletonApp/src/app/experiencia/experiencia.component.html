@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Experiencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="experienciaForm">
+    <ion-item>
+      <ion-label>Empresa: </ion-label>
+      <ion-input formControlName="empresa"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Año Inicio: </ion-label>
+      <ion-input formControlName="annoInicio" type="number" ></ion-input>
+    </ion-item>
+    <ion-note color="danger" *ngIf="experienciaForm.get('annoInicio')?.invalid && (experienciaForm.get('annoInicio')?.touched || experienciaForm.get('annoInicio')?.dirty)">
+      Ingrese un año válido entre 1900 y {{ currentYear }}.
+    </ion-note>
+
+    <ion-item>
+      <ion-label>¿Trabaja actualmente?: </ion-label>
+      <ion-checkbox formControlName="trabajaActualmente"></ion-checkbox>
+    </ion-item>
+
+    <ion-item *ngIf="!experienciaForm.get('trabajaActualmente')?.value">
+      <ion-label>Año Término: </ion-label>
+      <ion-input formControlName="annoTermino" type="number" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Cargo: </ion-label>
+      <ion-input formControlName="cargo" ></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="experienciaForm.invalid">Enviar</ion-button>
+  </form>
+</ion-content>
